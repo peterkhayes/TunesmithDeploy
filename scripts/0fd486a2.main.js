@@ -109,7 +109,7 @@
       this.set('sounds', sounds);
       this.set('context', context);
       this.set('noteEvents', []);
-      this.loadBuffer("/audio/metronome/tick.mp3", sounds.metronome.buffers, 0);
+      this.loadBuffer("https://s3-us-west-1.amazonaws.com/tunesmith/audio/metronome/tick.mp3", sounds.metronome.buffers, 0);
       return cb();
     };
 
@@ -123,7 +123,7 @@
         _results = [];
         for (i = _i = 0, _len = _ref1.length; _i < _len; i = ++_i) {
           note = _ref1[i];
-          _results.push(this.loadBuffer("/audio/" + name + "/" + note + ".mp3", instrument.buffers, i));
+          _results.push(this.loadBuffer("https://s3-us-west-1.amazonaws.com/tunesmith/audio/" + name + "/" + note + ".mp3", instrument.buffers, i));
         }
         return _results;
       }
